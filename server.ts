@@ -23,6 +23,9 @@ app.use('/api', apiRouter);
 import classesRouter = require('./routes/classes');
 apiRouter.use('/classes', classesRouter);
 
+import professorsRouter = require('./routes/professors');
+apiRouter.use('/professors', professorsRouter);
+
 import searchRouter = require('./routes/search');
 apiRouter.use('/search', searchRouter);
 

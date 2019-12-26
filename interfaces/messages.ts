@@ -67,4 +67,4 @@ interface ProfessorQueryMessage {
 type QueryMessage = ClassQueryMessage | ProfessorQueryMessage;
 
 
-export {ErrorMessage, ResultMessage, QueryMessage};
+export {ErrorMessage, ResultMessage, QueryMessage, ClassQueryMessage, ProfessorQueryMessage};
