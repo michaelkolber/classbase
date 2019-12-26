@@ -1,6 +1,11 @@
+/**
+ * A collection of miscelanious functions that are used throughout the database API.
+ */
+
+
 import express = require('express');
 
-import {ErrorMessage, ResultMessage} from './interfaces/message';
+import {ErrorMessage, ResultMessage} from './interfaces/messages';
 
 
 /**
@@ -53,6 +58,8 @@ function sendErrorMessage(res: express.Response, reason: string, statusCode?: nu
  * @param reason The reason that the request failed.
  */
 function createResultMessage(result: any) {
+    if (result === undefined) result = null; // To make sure we always send a result
+    
     const message: ResultMessage = {
         ok: true,
         result,
