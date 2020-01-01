@@ -7,6 +7,11 @@ will one day be publicly exposed.
 The API exposes a PostgreSQL database containing information on courses and professors. It 
 also exposes correlations that we may want to use.
 
+There are a few terms to become familiar with:
+- **Course:** A generic course given at a college. E.g. 'CSCI 120'.
+- **Class:** A specific instance of a course. E.g. 'CSCI 120, Section 3, Fall 2019'.
+- **Professor:** Someone who taught a class. Each class has an associated professor.
+
 The API has a few layers at a high level:
 1. **The REST API:** Clients (e.g. Gradebot) will interface with this. It presents all data 
 at a high level as JSON objects.
