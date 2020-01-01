@@ -4,6 +4,7 @@
 interface Professor {
     firstName: string;
     lastName: string;
+    id: number;
 }
 
 export = Professor;
