@@ -1,0 +1,36 @@
+{
+  "name": "classbase",
+  "version": "1.0.0",
+  "description": "Classbase is a database and associated API of courses and professors.",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelkolber/classbase.git"
+  },
+  "keywords": [
+    "cuny",
+    "college",
+    "professor",
+    "course",
+    "professors",
+    "courses"
+  ],
+  "author": "Michael Kolber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelkolber/classbase/issues"
+  },
+  "homepage": "https://github.com/michaelkolber/classbase#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^7.17.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.2",
+    "@types/pg": "^7.14.0"
+  }
+}
