@@ -1,11 +1,14 @@
-# Database API
+# Classbase
 
-This contains the database API. It is currently a private-facing API, but it may be turned 
+Classbase is a database and associated API for accessing the database.
+
+The API is currently a private-facing API, but it may be turned 
 into a public-facing API if the need arises. It is being built under the premise that it 
 will one day be publicly exposed.
 
-The API exposes a PostgreSQL database containing information on courses and professors. It 
-also exposes correlations that we may want to use.
+The API exposes a PostgreSQL database containing information on courses and professors.
+
+The database and API server can be run using Docker.
 
 There are a few terms to become familiar with:
 - **Course:** A generic course given at a college. E.g. 'CSCI 120'.
