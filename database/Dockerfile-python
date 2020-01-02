@@ -1,0 +1,16 @@
+# Runs the python script that imports the data into the database
+
+FROM python:3
+
+# Create work directory
+WORKDIR /usr/src/work
+
+# Install the single module
+RUN pip install --no-cache-dir psycopg2
+
+# Copy the python script and data
+COPY ./scripts/*.py ./scripts/
+COPY ./data/ ./data/
+
+# Run the script
+CMD ["python3", "./scripts/import.py"]
