@@ -1,10 +1,11 @@
 # Classbase
 
-Classbase is a database and associated API for accessing the database.
+Classbase is a database and associated API of CUNY classes and professors (right now only 
+Queens College).
 
-The API is currently a private-facing API, but it may be turned 
-into a public-facing API if the need arises. It is being built under the premise that it 
-will one day be publicly exposed.
+The API is currently a private-facing API, but it may be turned into a public-facing API 
+if the need arises. It is being built under the premise that it will one day be publicly 
+exposed.
 
 The API exposes a PostgreSQL database containing information on courses and professors.
 
