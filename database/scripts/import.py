@@ -1,4 +1,7 @@
 import csv
+import os
+import time
+
 import psycopg2
 
 
@@ -19,7 +22,9 @@ def import_classes(filepath):
         
         return classes
     except FileNotFoundError:
-        print("No file found in the 'database/data/' directory (are you sure you're calling this from outside 'database/'?). Skipping import.")
+        print(f"No file found in the '{filepath}' directory (are you sure you're calling this from outside 'database/'?)")
+        print(f"Current directory is '{os.getcwd()}'")
+        print('Skipping import...')
         exit(0)
 
 
@@ -53,14 +58,22 @@ def get_professor_ids(cursor):
 
 
 if __name__ == '__main__':
-    print()
-    print('Inserting data into database:')
     classes = None  # A list of `dict`s imported from the csv
     db_courses = {}  # A `dict` mapping `department number` to `id`
     db_professors = {}  # A `dict` mapping `last_name, first_name` to `id`
 
-    # Establish a connection to the server
-    cnx = psycopg2.connect(database='qc', user='docker', password='docker', host='postgres')
+    
+    # Try to establish a connection to the server. Keep retrying until it succeeds.
+    while True:
+        try:
+            cnx = psycopg2.connect(database='qc', user='docker', password='docker', host='postgres')
+        except psycopg2.OperationalError:
+            time.sleep(3)
+            continue
+        break
+    
+    print()
+    print('Inserting data into database:')
     print('Successfully established connection to the database')
     print()
 
