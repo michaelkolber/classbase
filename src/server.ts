@@ -35,14 +35,5 @@ app.all('/', (req, res) => {
 });
 
 
-// Connect to the database before starting up the server
-dbConnection.client.connect()
-    .then(() => {
-        console.log('Successfully connected to database.');
-        // Start the server
-        app.listen(port, () => console.log(`API server ready on port ${port}.`));
-    })
-    .catch((err) => {
-        console.error('Error connecting to the database:');
-        console.error(err);
-    });
+// Start the server
+app.listen(port, () => console.log(`API server ready on port ${port}.`));
