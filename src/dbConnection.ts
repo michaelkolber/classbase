@@ -7,6 +7,8 @@
 
 import pg = require('pg');
 
-const client = new pg.Client({connectionString: process.env.DB_URL || 'postgresql://postgres@127.0.0.1:5432/qc'});
+// We use `postgres` as the URL, because it resolves to the Postgres container when run on 
+// the Docker network.
+const client = new pg.Client({connectionString: process.env.DB_URL || 'postgresql://postgres@postgres:5432/qc'});
 
 export = {client};

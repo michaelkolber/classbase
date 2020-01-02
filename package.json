@@ -26,7 +26,8 @@
   "homepage": "https://github.com/michaelkolber/classbase#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^7.17.0"
+    "pg": "^7.17.0",
+    "typescript": "^3.7.4"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
